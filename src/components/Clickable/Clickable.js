@@ -1,5 +1,6 @@
 import React from "react";
 import click from "../../click.mp3";
+import './clickable.css'
 
 export default function Clickable(props) {
   const { onClick, isPlay = true } = props;
@@ -9,5 +10,5 @@ export default function Clickable(props) {
 
     onClick && onClick();
   };
-  return <div onClick={onClickListener}>{props.children}</div>;
+  return <div className={"main "+props.className} onClick={onClickListener}  >{props.children}</div>;
 }
